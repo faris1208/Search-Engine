@@ -93,6 +93,10 @@ searchForm.addEventListener("submit", (e) =>{
 
 });
 
+searchBox.addEventListener("click", (e) =>{  
+    icon.style.display = "block";
+})
+
 icon.addEventListener("click", (e) =>{
     // page++;
     // searchImages();
@@ -108,6 +112,8 @@ icon.addEventListener("click", (e) =>{
     // const parent = deleteButton.parentElement;
     // results.remove();
 })
+
+
 
 
 
