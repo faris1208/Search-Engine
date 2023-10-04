@@ -4,11 +4,14 @@ const searchForm = document.getElementById("search-form");
 const searchBox = document.getElementById("search-box");
 const searchResult = document.getElementById("search-result");
 const search = document.getElementById("search");
+const icon = document.getElementById("icon");
 const showMoreBtn = document.getElementById("show-more-btn");
 const box = document.getElementById("box");
 
 let keyword = "";
 let page = 1;
+
+let results;
 
 async function searchImages(){
     keyword = searchBox.value;
@@ -24,9 +27,8 @@ async function searchImages(){
         searchResult.innerHTML = "";
     }
 
-    const results = data.results;
+    results = data.results;
 
- 
 
     results.map((result) =>{
         const image = document.createElement("img");
@@ -76,7 +78,7 @@ async function searchImages(){
 
 
 }
-// searchBox.value = "";
+
 
 searchForm.addEventListener("submit", (e) =>{
 
@@ -85,6 +87,21 @@ searchForm.addEventListener("submit", (e) =>{
     searchImages();
 
 });
+
+icon.addEventListener("click", (e) =>{
+    // page++;
+    // searchImages();
+    // e.target.result.remove(result);
+    // console.log(results ,'resultresultsresultss')
+    // results = []
+    searchResult.innerHTML = ""
+    showMoreBtn.style.display = "none"
+    searchBox.value = "";
+    box.style.display = "none";
+    
+    // const parent = deleteButton.parentElement;
+    // results.remove();
+})
 
 
 

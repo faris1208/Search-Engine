@@ -68,6 +68,12 @@ form button{
     font-size: 18px;
 }
 
+#icon{
+    font-size: 20px;
+    margin: 0px 5px;
+}
+
+
 #show-more-btn{
     text-align: center;
     background: #ff3929;
@@ -168,7 +174,7 @@ form button{
         height: 100%;
         background: #ff3929;
         color: #fff;
-        font-size: 18px;
+        font-size: 23px;
         border: 0;
         outline: 0;
         border-top-right-radius: 8px;
@@ -179,7 +185,12 @@ form button{
     
     ::placeholder{
         color: #fff;
-        font-size: 19px;
+        font-size: 24px;
+    }
+
+    #icon{
+        font-size: 30px;
+        margin: 0px 10px;
     }
     
     #show-more-btn{
@@ -196,7 +207,7 @@ form button{
     }
 
     #box{
-        width: 10%;
+        width: 13%;
         text-align: center;
         background: red;
         color: #fff;
