@@ -5,6 +5,7 @@ const searchBox = document.getElementById("search-box");
 const searchResult = document.getElementById("search-result");
 const search = document.getElementById("search");
 const showMoreBtn = document.getElementById("show-more-btn");
+const box = document.getElementById("box");
 
 let keyword = "";
 let page = 1;
@@ -25,45 +26,69 @@ async function searchImages(){
 
     const results = data.results;
 
-    // const h2 = document.createElement("h2");
-    // h2.innerHTML = "Error";
-    // form.appendChild(h2);
-
-    // if(data.total === 0){
-       
-    // }
-    // console.log(data,valiiiuuuuuuuuuuuuuuuuuuuuuuu);
+ 
 
     results.map((result) =>{
         const image = document.createElement("img");
         image.src = result.urls.small;
         const imageLink = document.createElement("a");
         imageLink.href = result.links.html;
-        imageLink.target = "_blank";
+        // imageLink.target = "_blank";
 
         imageLink.appendChild(image);
         searchResult.appendChild(imageLink);
     })
 
     showMoreBtn.style.display = "block";
+    // box.style.display = "block";
+
+
+    if(searchBox.value === ""){
+        box.style.display = "none";
+        showMoreBtn.style.display = "none";
+    }
+    
+    else if(searchBox.value === ""){
+        box.style.display = "none";
+        showMoreBtn.style.display = "none";
+    }
+
+    if( results){
+        box.style.display = "none";
+       
+    }
+    
+    else if(results){
+        box.style.display = "none";
+        
+    }
+
+    if(data.total === 0){
+        box.style.display = "block";
+        showMoreBtn.style.display = "none";
+    }
+    else if(data.total === 0){
+        box.style.display = "none";
+        showMoreBtn.style.display = "block";
+    }
+
+    // searchBox.value = "";
+
 
 }
-
-searchBox.value = "";
+// searchBox.value = "";
 
 searchForm.addEventListener("submit", (e) =>{
+
     e.preventDefault();
     page = 1;
     searchImages();
+
 });
 
 
 
-// search.addEventListener("click", () =>{
-    
-//     page = 1;
-//     searchImages();
-// })
+// search.addEventListener("click",searchImages);
 
 showMoreBtn.addEventListener("click", () =>{
     page++;

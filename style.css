@@ -79,6 +79,20 @@ form button {
   display: none;
 }
 
+#box {
+  width: 50%;
+  text-align: center;
+  background: red;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 40px auto 0px;
+  cursor: pointer;
+  display: none;
+}
+
 #search-result {
   width: 80%;
   margin: 100px auto 50px;
@@ -163,6 +177,19 @@ form button {
     padding: 10px 20px;
     border-radius: 4px;
     margin: 10px auto 100px;
+    cursor: pointer;
+    display: none;
+  }
+  #box {
+    width: 10%;
+    text-align: center;
+    background: red;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 50px auto 0px;
     cursor: pointer;
     display: none;
   }
