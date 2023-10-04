@@ -42,26 +42,31 @@ async function searchImages(){
     })
 
     showMoreBtn.style.display = "block";
+    icon.style.display = "block";
     // box.style.display = "block";
 
 
     if(searchBox.value === ""){
         box.style.display = "none";
         showMoreBtn.style.display = "none";
+        // icon.style.display = "none";
     }
     
     else if(searchBox.value === ""){
         box.style.display = "none";
         showMoreBtn.style.display = "none";
+        // icon.style.display = "block";
     }
 
     if( results){
         box.style.display = "none";
+        icon.style.display = "block";
        
     }
     
     else if(results){
         box.style.display = "none";
+        icon.style.display = "block";
         
     }
 
@@ -98,6 +103,7 @@ icon.addEventListener("click", (e) =>{
     showMoreBtn.style.display = "none"
     searchBox.value = "";
     box.style.display = "none";
+    icon.style.display = "none";
     
     // const parent = deleteButton.parentElement;
     // results.remove();

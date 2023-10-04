@@ -69,6 +69,7 @@ form button {
 #icon {
   font-size: 20px;
   margin: 0px 5px;
+  display: none;
 }
 
 #show-more-btn {
@@ -176,6 +177,7 @@ form button {
   #icon {
     font-size: 30px;
     margin: 0px 10px;
+    display: none;
   }
   #show-more-btn {
     text-align: center;
