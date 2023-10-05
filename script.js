@@ -41,8 +41,6 @@ async function searchImages(){
         searchResult.appendChild(imageLink);
     })
 
-    searchTerms = searchBox.value;
-
     showMoreBtn.style.display = "block";
     // icon.style.display = "none";
     // box.style.display = "block";
@@ -51,14 +49,14 @@ async function searchImages(){
     if(searchBox.value === ""){
         box.style.display = "none";
         showMoreBtn.style.display = "none";
-        // icon.style.display = "none";
+        icon.style.display = "none";
         
     }
     
     else if(searchBox.value === ""){
         box.style.display = "none";
         showMoreBtn.style.display = "none";
-        // icon.style.display = "none";
+        icon.style.display = "none";
     }
 
     if(results){
@@ -76,6 +74,7 @@ async function searchImages(){
     if(data.total === 0){
         box.style.display = "block";
         showMoreBtn.style.display = "none";
+        
     }
     else if(data.total === 0){
         box.style.display = "none";
@@ -97,7 +96,8 @@ searchForm.addEventListener("submit", (e) =>{
 });
 function invokingOnKeyPressEvent(event) {
         icon.style.display = 'block';
-        searchResult.innerHTML = ""
+        // searchResult.innerHTML = ""
+        
 }
 
 // searchBox.addEventListener("click", (e) =>{  
