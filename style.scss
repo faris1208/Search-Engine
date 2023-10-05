@@ -31,6 +31,7 @@ form{
     margin: auto;
     height: 60px;
     background-color: #434989;
+    // color: #fff;
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -169,6 +170,22 @@ form button{
         font-size: 18px;
         padding: 0px 30px;
     }
+
+
+    // form input[type=search] { 
+    //     color: red;  
+    //     // text-align: right;
+    //     cursor: pointer;
+    //     // display: block; 
+    //     // width: 100%; 
+    //     // letter-spacing: 4px;        
+    //     // text-shadow: 0 0 2px black;       
+    //     // word-spacing: 20px;               
+    // }
+
+    // #search-box{
+    //     color: #fff;
+    // }
     
     form button{
         padding: 0px 40px;

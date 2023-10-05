@@ -41,8 +41,10 @@ async function searchImages(){
         searchResult.appendChild(imageLink);
     })
 
+    searchTerms = searchBox.value;
+
     showMoreBtn.style.display = "block";
-    icon.style.display = "block";
+    // icon.style.display = "none";
     // box.style.display = "block";
 
 
@@ -50,23 +52,24 @@ async function searchImages(){
         box.style.display = "none";
         showMoreBtn.style.display = "none";
         // icon.style.display = "none";
+        
     }
     
     else if(searchBox.value === ""){
         box.style.display = "none";
         showMoreBtn.style.display = "none";
-        // icon.style.display = "block";
+        // icon.style.display = "none";
     }
 
-    if( results){
+    if(results){
         box.style.display = "none";
-        icon.style.display = "block";
+        // icon.style.display = "block";
        
     }
     
     else if(results){
         box.style.display = "none";
-        icon.style.display = "block";
+        // icon.style.display = "block";
         
     }
 
@@ -92,15 +95,20 @@ searchForm.addEventListener("submit", (e) =>{
     searchImages();
 
 });
+function invokingOnKeyPressEvent(event) {
+        icon.style.display = 'block';
+        searchResult.innerHTML = ""
+}
 
-searchBox.addEventListener("click", (e) =>{  
-    icon.style.display = "block";
-})
+// searchBox.addEventListener("click", (e) =>{  
+//     searchResult.innerHTML = ""
+//     showMoreBtn.style.display = "none"
+//     searchBox.value = "";
+//     box.style.display = "none";
+//     // icon.style.display = "block";
+// })
 
 icon.addEventListener("click", (e) =>{
-    // page++;
-    // searchImages();
-    // e.target.result.remove(result);
     // console.log(results ,'resultresultsresultss')
     // results = []
     searchResult.innerHTML = ""
@@ -109,8 +117,7 @@ icon.addEventListener("click", (e) =>{
     box.style.display = "none";
     icon.style.display = "none";
     
-    // const parent = deleteButton.parentElement;
-    // results.remove();
+   
 })
 
 
